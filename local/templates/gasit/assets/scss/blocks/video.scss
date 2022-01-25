@@ -1,0 +1,37 @@
+.video_block{
+  .media-content, iframe{
+    height: 675px;
+    width: 100%;
+    border-radius: 80px;
+    overflow: hidden;
+  }
+  .media-content{
+    .nx-video__link{
+      svg{
+        filter: drop-shadow(0px 100px 80px rgba(33, 73, 93, 0.05)) drop-shadow(0px 41.7776px 33.4221px rgba(33, 73, 93, 0.0359427)) drop-shadow(0px 22.3363px 17.869px rgba(33, 73, 93, 0.0298054)) drop-shadow(0px 12.5216px 10.0172px rgba(33, 73, 93, 0.025)) drop-shadow(0px 6.6501px 5.32008px rgba(33, 73, 93, 0.0201946)) drop-shadow(0px 2.76726px 2.21381px rgba(33, 73, 93, 0.0140573));
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .media-content, iframe{
+      border-radius: 40px;
+      height: 365px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .media-content, iframe{
+      border-radius: 20px;
+      height: 320px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .media-content, iframe{
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .media-content, iframe{
+      height: 160px;
+    }
+  }
+}

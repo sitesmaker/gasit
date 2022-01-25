@@ -1,0 +1,176 @@
+.mnav{
+    position: relative;
+    &__wrap{
+        width: 100%;
+        height: 100%;
+        min-height: 30px;
+        margin-top: 5px;
+    }
+
+    &__brand, &__lang{
+        display: none;
+    }
+
+    @include media('xs'){
+        position: fixed;
+        top: 80px;
+        left: 0;
+        z-index: 500;
+        height: auto;
+        overflow: hidden;
+        background-color: map_get($menu, bg);
+        width: 100%;
+        transition: all $tr-time $tr-type;
+        visibility: hidden;
+        //opacity: 0;
+        transform: translateX(-100%);
+        box-shadow: 0px 100px 80px rgba(33, 73, 93, 0.05), 0px 41.7776px 33.4221px rgba(33, 73, 93, 0.0359427), 0px 22.3363px 17.869px rgba(33, 73, 93, 0.0298054), 0px 12.5216px 10.0172px rgba(33, 73, 93, 0.025), 0px 6.6501px 5.32008px rgba(33, 73, 93, 0.0201946), 0px 2.76726px 2.21381px rgba(33, 73, 93, 0.0140573);
+        .menu-open &{
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+            //box-shadow: 3px 0 5px rgba(black, .05);
+        }
+        
+        &__container{
+            padding: 0 20px;
+        }
+        
+        &__search, &__lang{
+            margin-bottom: 30px;
+        }
+    
+        &__brand, &__lang{
+            display: none;
+        }
+        &__brand{
+            padding: 16px 20px 16px;
+            margin-bottom: 8px;
+        }
+
+        &__wrap{
+            max-height: 100%;
+            padding-left: map_get($scrollbarCustom, handle-size);
+            padding-bottom: map_get($scrollbarCustom, handle-size);
+            .os-scrollbar{
+                display: none;
+            }
+        }
+        &__menu{
+            padding: 30px 20px;
+        }
+    }
+}
+
+.main-menu{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -5px;
+    list-style-type: none;
+    width: 100%;
+    &__el{
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 300;
+        margin-right: 25px;
+        margin-bottom: 5px;
+        padding: 0;
+        &:before{
+            display: none;
+        }
+        &.active{
+            color: $c-orange;
+            font-weight: 700;
+            span{
+                border-bottom-color: transparent;
+                color: $c-orange;
+            }
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &__link{
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    @media screen and (max-width: 991px) {
+        justify-content: flex-end;
+    }
+
+    @include media('xs'){
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        &__el{
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        &__link{
+            padding: 8px $container-gutter-sm;
+            padding: 0;
+            margin-right: 15px;
+        }
+    }
+}
+
+.sub-menu{
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: map_get($submenu, width);
+    display: block;
+    list-style-type: none;
+    background-color: map_get($submenu, bg);
+    border-radius: $brd-rad-box;
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 3px 5px rgba(black, .05);
+    transition: all $tr-time $tr-type;
+    visibility: hidden;
+    opacity: 0;
+    &__link{
+        display: block;
+        padding: 8px 24px;
+    }
+    .sub-menu-open &{
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+
+    @include media('xs'){
+        position: static;
+        //display: none;
+        transition: none;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: none;
+        max-height: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: map_get($submenu, bg-xs);
+        width: 100%;
+        
+        /*&.is-active {
+            display: block;
+        }*/
+        &__link{
+            display: block;
+            padding: 6px ($container-gutter-xs*2);
+        }
+    }
+}

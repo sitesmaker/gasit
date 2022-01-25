@@ -1,0 +1,220 @@
+.how_works{
+  &.wrap{
+    @media screen and (max-width: 1200px) {
+      padding-bottom: 0;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 30px;
+    }
+  }
+  .header_block{
+    .text{
+      max-width: 991px;
+      font-size: 22px;
+      line-height: 120%;
+      b{
+        font-weight: 700;
+      }
+      @media screen and (max-width: 991px) {
+        font-size: 20px;
+        line-height: 120%;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 120%;
+      }
+    }
+  }
+  &__item{
+    img{
+      max-height: 520px;
+      min-height: 520px;
+      object-fit: contain;
+    }
+    .img_block{
+      position: relative;
+      img{
+        max-height: 520px;
+        min-height: 520px;
+        object-fit: contain;
+      }
+      .description{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_item{
+          width: 50%;
+          margin-bottom: 45px;
+          p{
+            position: relative;
+            font-size: 18px;
+            line-height: 20px;
+            width: 233px;
+            @media screen and (max-width: 991px) {
+              font-size: 16px;
+              line-height: 17px;
+            }
+            @media screen and (max-width: 767px) {
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+          &:first-child{
+            p{
+              width: 200px;
+              &:before{
+                content: "";
+                position: absolute;
+                top: -33px;
+                left: 0;
+                width: 260px;
+                height: 30px;
+                background: url(/local/templates/gasit/assets/images/icons/line-1.svg)no-repeat;
+                background-size: contain;
+              }
+            }
+            @media screen and (max-width: 1200px) {
+              margin-top: 40px;
+            }
+          }
+          &:nth-child(2){
+            padding-left: 110px;
+            margin-top: -25px;
+            p{
+              &:before{
+                content: "";
+                position: absolute;
+                bottom: -43px;
+                left: -48px;
+                width: 64px;
+                height: 40px;
+                background: url(/local/templates/gasit/assets/images/icons/line-2.svg) no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+          &:last-child{
+            p{
+              &:before{
+                content: "";
+                position: absolute;
+                top: -33px;
+                left: 0;
+                width: 260px;
+                height: 30px;
+                background: url(/local/templates/gasit/assets/images/icons/line-3.svg) no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          top: 60px;
+          &_item{
+            &:first-child,&:last-child{
+              p{
+                &:before{
+                  width: 240px;
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          top: 80px;
+          &_item{
+            &:first-child,&:last-child{
+              p{
+                &:before{
+                  width: 220px;
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 991px) {
+          &_item{
+            &:first-child{
+              margin-top: 0;
+              p{
+                width: 145px;
+                &:before{
+                  background: url(/local/templates/gasit/assets/images/icons/line-4.svg) no-repeat;
+                  width: 170px;
+                  height: 62px;
+                }
+              }
+            }
+            &:last-child{
+              margin-top: 30px;
+              p{
+                &:before{
+                  background: url(/local/templates/gasit/assets/images/icons/line-5.svg) no-repeat;
+                  width: 170px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 767px) {
+          top: 0;
+          &_item{
+            &:nth-child(2){
+              padding-left: 60px;
+              margin-top: -40px;
+              p{
+                max-width: 138px;
+                width: 100%;
+                &:before{
+                  background: url(/local/templates/gasit/assets/images/icons/line-6.svg) no-repeat;
+                  width: 37px;
+                  height: 47px;
+                  bottom: -50px;
+                  left: 0px;
+                }
+              }
+            }
+            &:last-child{
+              p{
+                width: 145px;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 360px) {
+          &_item{
+            &:nth-child(2){
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      &:first-child{
+        margin-bottom: 30px;
+      }
+      img{
+        max-height: 320px;
+        min-height: 320px;
+      }
+      .img_block{
+        img{
+          max-height: 320px;
+          min-height: 320px;
+        }
+      }
+    }
+  }
+  &>.flex-row{
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

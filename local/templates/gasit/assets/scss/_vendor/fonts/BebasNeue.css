@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue-Light.eot');
+    src: url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue-Light.eot?#iefix') format('embedded-opentype'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue-Light.woff') format('woff'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue-Light.woff2') format('woff2'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue.eot');
+    src: url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue.eot?#iefix') format('embedded-opentype'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue.woff') format('woff'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue.woff2') format('woff2'),
+    url('/local/templates/gasit/assets/fonts/BebasNeue/BebasNeue.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

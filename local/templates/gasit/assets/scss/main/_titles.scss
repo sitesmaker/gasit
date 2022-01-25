@@ -1,0 +1,101 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .title-page{
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.16;
+    color: $c-gasit-blue;
+}
+h1, .h1{
+    font-style: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: $fz-xxl;
+    line-height: 107px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    @include media('sm-max'){
+        font-size: $fz-xl-ms;
+        line-height: 84px;
+        letter-spacing: 0.03em;
+    }
+    @include media('xs'){
+        font-size: $fz-xl;
+        line-height: 72px;
+        margin-bottom: 15px;
+    }
+}
+h2, .h2{
+    font-style: normal;
+    font-size: $fz-xl;
+    line-height: 72px;
+    margin-bottom: 15px;
+    @include media('sm-max'){
+        font-size: $fz-big;
+        line-height: 50px;
+    }
+    @include media('xs'){
+        font-size: $fz-xxlarge;
+        line-height: 42px;
+        margin-bottom: 10px;
+    }
+}
+h3, .h3{
+    font-style: normal;
+    font-weight: 300;
+    font-size: $fz-xxlarge;
+    line-height: 42px;
+    margin-bottom: 10px;
+    @include media('sm-max'){
+        font-size: $fz-xxmed;
+        line-height: 30px;
+    }
+    @include media('xs'){
+        font-size: $fz-med;
+        line-height: 24px;
+    }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6{
+    font-size: $fz-xxmed;
+    margin-bottom: 10px;
+    @include media('sm-max'){
+        font-size: $fz-med-b;
+        line-height: $fz-med-b;
+    }
+    @include media('xs'){
+        font-size: $fz-xmain-b;
+        line-height: $fz-xmain-b;
+    }
+}
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.title-page{
+    font-size: $fz-xl;
+    margin-bottom: 20px;
+    @include media('sm-min', 'sm-max'){
+        font-size: $fz-big;
+    }
+    @include media('xs'){
+        font-size: $fz-xxlarge;
+        margin-bottom: 15px;
+    }
+}
+
+.pretitle{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.factoid{
+    font-size: $fz-xxl;
+    font-weight: bold;
+    line-height: 1;
+    @include media('xs'){
+        font-size: $fz-big;
+    }
+}
